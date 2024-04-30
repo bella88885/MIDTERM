@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product[0] }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32-new.webp" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+   
+
+
+
+    .product-image {
+        margin-bottom: 20px;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .product-price {
+        margin-top: 10px;
+        color: #484848; /* Yazı rengi */
+    }
+
+    .product-description {
+        margin-top: 10px;
+        color: #484848; /* Yazı rengi */
+    }
+
+    .quantity-wrapper {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .quantity-wrapper .input-group {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .btn-primary {
+        background-color: #ff6000;
+        border-color: #ff6000;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff6000;
+        border-color: #ff6000;
+    }
+
+    .product-description1 {
+        color: green;
+    }
+
+    .input-group {
+        max-width: 120px !important;
+    }
+
+    .container-fluid .row {
+        margin-right: 0; /* Sağ boşluğu kaldır */
+        margin-left: 0; /* Sol boşluğu kaldır */
+    }
+
+    .col-md-6 {
+        background-color: #f5f5f5;
+        width: 100%; /* Tam genişlik */
+    }
+
+    .marka {
+        color: #537ecf;
+    }
+ 
+    /* Tüm yazıların rengini belirle */
+    body {
+        color: #484848;
+    }
+    .seller-container {
+  overflow-x: auto;
+}
+</style>
+
+
+ 
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+         
+           
+                
+            <div class="col-md-5 ">
+                <img src="{{ variants[0][1] }}" alt="Ürün Resmi" class="img-fluid" id="product-image">
+            </div>
+               
+            
+            <div class="col-md-6 ">
+                <div class="product-details">
+                    <h4> {{ product[0] }}</h4>
+                    <div class="marka">
+                        <p><strong> {{ product[5] }} </strong></p>
+                        
+                    </div>
+                   
+                    <p class="product-description"><strong> {{ product[1] }}</strong></p>
+                
+
+                    <div class="d-flex">
+                        <div>
+                            <h2 class="product-price mr-4" style="margin-right: 35%;">{{ product[2] }} TL</h2>
+                        </div>
+                        <div class="ml-auto d-flex flex-column">
+                            <div class="d-flex align-items-center">
+                                <span class="rating-star mr-2">5,0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128px" height="20px" viewBox="0 0 128 20" version="1.1">
+                                    <title>rating_star</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="rating_star" transform="translate(-1.000000, -1.000000)" fill="#FFA900">
+                                            <path d="M128.958,8.555 C128.833,8.167 128.475,7.904 128.072,7.904 C128.072,7.904 121.543,7.904 121.543,7.904 C121.543,7.904 119.527,1.637 119.527,1.637 C119.401,1.249 119.044,0.986 118.64,0.986 C118.236,0.986 117.878,1.249 117.753,1.637 C117.753,1.637 115.736,7.903 115.736,7.903 C115.736,7.903 109.21,7.903 109.21,7.903 C108.806,7.903 108.448,8.166 108.323,8.553 C108.199,8.941 108.335,9.367 108.662,9.605 C108.662,9.605 113.941,13.479 113.941,13.479 C113.941,13.479 111.926,19.747 111.926,19.747 C111.801,20.135 111.938,20.558 112.264,20.798 C112.429,20.917 112.621,20.978 112.813,20.978 C113.005,20.978 113.197,20.917 113.36,20.798 C113.36,20.798 118.639,16.926 118.639,16.926 C118.639,16.926 123.92,20.798 123.92,20.798 C124.249,21.039 124.69,21.039 125.017,20.798 C125.345,20.56 125.478,20.135 125.355,19.749 C125.355,19.749 123.34,13.481 123.34,13.481 C123.34,13.481 128.62,9.606 128.62,9.606 C128.947,9.367 129.082,8.942 128.958,8.555 Z" id="path-1"/>
+                                            <path d="M102.825,8.555 C102.7,8.167 102.342,7.904 101.939,7.904 C101.939,7.904 95.41,7.904 95.41,7.904 C95.41,7.904 93.394,1.637 93.394,1.637 C93.269,1.249 92.911,0.986 92.507,0.986 C92.103,0.986 91.745,1.249 91.62,1.637 C91.62,1.637 89.603,7.903 89.603,7.903 C89.603,7.903 83.077,7.903 83.077,7.903 C82.673,7.903 82.315,8.166 82.191,8.553 C82.067,8.941 82.202,9.367 82.529,9.605 C82.529,9.605 87.808,13.479 87.808,13.479 C87.808,13.479 85.793,19.747 85.793,19.747 C85.668,20.135 85.805,20.558 86.132,20.798 C86.296,20.917 86.488,20.978 86.68,20.978 C86.872,20.978 87.064,20.917 87.227,20.798 C87.227,20.798 92.506,16.926 92.506,16.926 C92.506,16.926 97.787,20.798 97.787,20.798 C98.115,21.039 98.557,21.039 98.884,20.798 C99.212,20.56 99.345,20.135 99.223,19.749 C99.223,19.749 97.207,13.481 97.207,13.481 C97.207,13.481 102.487,9.606 102.487,9.606 C102.814,9.367 102.949,8.942 102.825,8.555 Z" id="path-2"/>
+                                            <path d="M75.317,8.555 C75.191,8.167 74.834,7.904 74.43,7.904 C74.43,7.904 67.902,7.904 67.902,7.904 C67.902,7.904 65.885,1.637 65.885,1.637 C65.76,1.249 65.402,0.986 64.998,0.986 C64.594,0.986 64.237,1.249 64.111,1.637 C64.111,1.637 62.094,7.903 62.094,7.903 C62.094,7.903 55.569,7.903 55.569,7.903 C55.165,7.903 54.807,8.166 54.682,8.553 C54.558,8.941 54.694,9.367 55.021,9.605 C55.021,9.605 60.299,13.479 60.299,13.479 C60.299,13.479 58.285,19.747 58.285,19.747 C58.16,20.135 58.297,20.558 58.623,20.798 C58.788,20.917 58.979,20.978 59.172,20.978 C59.364,20.978 59.555,20.917 59.719,20.798 C59.719,20.798 64.998,16.926 64.998,16.926 C64.998,16.926 70.279,20.798 70.279,20.798 C70.607,21.039 71.048,21.039 71.376,20.798 C71.704,20.56 71.837,20.135 71.714,19.749 C71.714,19.749 69.698,13.481 69.698,13.481 C69.698,13.481 74.979,9.606 74.979,9.606 C75.305,9.367 75.441,8.942 75.317,8.555 Z" id="path-3"/>
+                                            <path d="M49.184,8.555 C49.058,8.167 48.701,7.904 48.297,7.904 C48.297,7.904 41.769,7.904 41.769,7.904 C41.769,7.904 39.752,1.637 39.752,1.637 C39.627,1.249 39.269,0.986 38.865,0.986 C38.461,0.986 38.104,1.249 37.978,1.637 C37.978,1.637 35.961,7.903 35.961,7.903 C35.961,7.903 29.436,7.903 29.436,7.903 C29.031,7.903 28.674,8.166 28.549,8.553 C28.425,8.941 28.561,9.367 28.888,9.605 C28.888,9.605 34.166,13.479 34.166,13.479 C34.166,13.479 32.152,19.747 32.152,19.747 C32.027,20.135 32.164,20.558 32.49,20.798 C32.655,20.917 32.846,20.978 33.039,20.978 C33.231,20.978 33.422,20.917 33.586,20.798 C33.586,20.798 38.865,16.926 38.865,16.926 C38.865,16.926 44.146,20.798 44.146,20.798 C44.474,21.039 44.915,21.039 45.243,20.798 C45.571,20.56 45.704,20.135 45.581,19.749 C45.581,19.749 43.566,13.481 43.566,13.481 C43.566,13.481 48.846,9.606 48.846,9.606 C49.172,9.367 49.308,8.942 49.184,8.555 Z" id="path-4"/>
+                                            <path d="M21.675,8.555 C21.55,8.167 21.192,7.904 20.789,7.904 C20.789,7.904 14.26,7.904 14.26,7.904 C14.26,7.904 12.244,1.637 12.244,1.637 C12.119,1.249 11.761,0.986 11.357,0.986 C10.953,0.986 10.595,1.249 10.47,1.637 C10.47,1.637 8.453,7.903 8.453,7.903 C8.453,7.903 1.928,7.903 1.928,7.903 C1.523,7.903 1.165,8.166 1.041,8.553 C0.917,8.941 1.052,9.367 1.379,9.605 C1.379,9.605 6.658,13.479 6.658,13.479 C6.658,13.479 4.643,19.747 4.643,19.747 C4.518,20.135 4.655,20.558 4.982,20.798 C5.146,20.917 5.338,20.978 5.53,20.978 C5.722,20.978 5.914,20.917 6.077,20.798 C6.077,20.798 11.357,16.926 11.357,16.926 C11.357,16.926 16.638,20.798 16.638,20.798 C16.966,21.039 17.407,21.039 17.734,20.798 C18.062,20.56 18.196,20.135 18.073,19.749 C18.073,19.749 16.057,13.481 16.057,13.481 C16.057,13.481 21.337,9.606 21.337,9.606 C21.664,9.367 21.8,8.942 21.675,8.555 Z" id="path-5"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <span><strong> {{ product[4] }} değerlendirme</strong></span>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                   <p >
+                    {{ '{:.2f}'.format(product[2]/6) }}TL x 6 aya varan taksitle
+       
+                </p>
+                        
+                   
+                    <div class="product-description">
+                        <div style="display: flex; align-items: center;">
+                            <img src="/images/premium.webp" alt="Premium Image" style="width: 30px; margin-right: 10px;">
+                            <p>Premium ile avantajlarını katla, Hepsipara kazan.</p>
+                        </div>
+                    </div>
+                    <div class="product-seller-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                        <button class="seller-container" style="padding: 0.25rem 0.25rem; border: 1px solid #ddd; background:#ffff; display: flex; align-items: center; flex-grow: 1; margin-bottom: 0.5rem;">
+                            <span>Satıcı:</span>
+                            <br>
+                            <a href="#" class="seller-name"><strong> {{ seller_info[0] }}</strong></a>
+                            <span class="seller-label">&nbsp; &nbsp;</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M9 0C4.02545 0 0 4.02545 0 9C0 13.9745 4.02545 18 9 18C13.9745 18 18 13.9745 18 9C18 4.02545 13.9745 0 9 0ZM13.68 7.01182L8.77091 12.1255C8.61545 12.2891 8.39455 12.3709 8.18182 12.3709C8.00182 12.3709 7.81364 12.3136 7.66636 12.1909L4.39364 9.53182C4.04182 9.24545 3.99273 8.73 4.27091 8.37818C4.55727 8.03454 5.07273 7.97727 5.42455 8.26364L8.11636 10.4482L12.5018 5.87455C12.8127 5.55545 13.3364 5.54727 13.6555 5.85C13.9827 6.16091 13.9909 6.68455 13.68 7.01182Z" fill="#2C96FF"/>
+                                </svg>
+                                Resmi Satıcı
+                            </span>
+                            <span class="seller-label">&nbsp; &nbsp; </span>
+                            <span class="seller-label" style="border-left: 1px solid #bfbfbf; padding-left: 4px;">&nbsp;Puan &nbsp;</span>
+                            <span class="rating" style="background-color:#40ad40; color: white; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.8rem;">{{ seller_info[1] }} </span>
+                            <span class="seller-label">&nbsp;  </span>
+                            <span class="show-campaigns" style="border-left: 1px solid #bfbfbf; padding-left: 4px;">&nbsp;&nbsp;Kampanyaları Gör</span>
+                        </button>
+                        <div class="ask-to-seller-wrapper" style="margin-left: 0.5rem;">
+                            <button class="buybox" style="border: 2px solid #ccc; border-radius: 8px; padding: 0.2rem 0.5rem; font-size: 0.8rem;">Satıcıya Sor (12)</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    <p class="product-description1">200 TL üzeri kargo bedava</p>
+                    <div class="color-buttons" style="display: flex; flex-wrap: wrap;">
+                        {% if variants|length > 1 %}
+                            {% for variant in variants %}
+                                <button class="btn btn-light btn-color" onclick="changeProductImage('{{ variant[1] }}')" style="display: flex; align-items: center; justify-content: center; margin-right: 10px; margin-bottom: 10px;">
+                                    <img src="{{ variant[1] }}" alt="{{ variant[0] }}" class="img-thumbnail" style="max-width: 50px; max-height: 50px; margin-right: 5px;">
+                                    <div>
+                                        <p style="margin-bottom: 5px; margin-top: 5px;">{{ variant[0] }}</p>
+                                        <p style="margin-bottom: 0;"><strong>{{ product[2] }}TL</strong></p>
+                                    </div>
+                                </button>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <div class="quantity-wrapper">
+                        <div class="input-group">
+                            <button class="btn btn-secondary" type="button" onclick="changeQuantity(-1)">
+                                <i class="fas fa-minus"></i>
+                                <span>-</span>
+                            </button>
+                            <input id="quantity" name="quantity" class="form-control text-center" type="text" value="1" readonly style="max-width: 60px;">
+                            <button class="btn btn-secondary" type="button" onclick="changeQuantity(1)">
+                                <i class="fas fa-plus"></i>
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                <defs>
+                                  <style>
+                                    .cls-1 {
+                                      fill: #fff;
+                                      stroke: #fff;
+                                      stroke-width: 2px;
+                                      fill-rule: evenodd;
+                                    }
+                                  </style>
+                                </defs>
+                                <path id="basket_icon" data-name="basket icon" class="cls-1" d="M1222,54c0.03-.719-0.31-2.031-1.44-2h-10.84l-0.81-2.806A1.6,1.6,0,0,0,1207.48,48h-2.47a0.879,0.879,0,0,0-1.01.981v0.193a0.956,0.956,0,0,0,1.19.887l0.89,0,1.76,6.276A2.174,2.174,0,0,0,1210,58h9a2.155,2.155,0,0,0,2-1Zm-12.99,10.5a1.5,1.5,0,1,0,1.5-1.5A1.5,1.5,0,0,0,1209.01,64.5Zm7,0a1.49,1.49,0,1,0,1.49-1.5A1.5,1.5,0,0,0,1216.01,64.5Z" transform="translate(-1203 -47)"/>
+                              </svg>
+                              
+                            <strong>Sepete Ekle </strong>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function changeQuantity(amount) {
+        var quantityInput = document.getElementById("quantity");
+        var currentQuantity = parseInt(quantityInput.value);
+        var newQuantity = currentQuantity + amount;
+        
+        if (newQuantity < 1) {
+            newQuantity = 1; // En az 1 ürün olmalı
+        }
+        
+        quantityInput.value = newQuantity;
+    }
+
+    function changeProductImage(imageUrl) {
+        document.getElementById("product-image").src = imageUrl;
+    }
+</script>
+</html>
