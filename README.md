@@ -9,5 +9,4 @@ Technical Details:
 
 Development Stack: The platform is built using Flask, a Python web framework, for the backend, and HTML/CSS/JavaScript for the frontend and I use Bootstarp.
 Database Management: MySQL is used as the database management system to store and retrieve product information efficiently.
-Session Management: Flask's session management capabilities are utilized to maintain user sessions and provide a personalized experience.
-Integration: External APIs may be integrated to enhance certain features, such as payment processing or real-time inventory updates.
+
