@@ -3,7 +3,7 @@ Key Features:
 
 Product Listings: The platform features a wide range of products categorized into various sections, similar to Hepsiburada. Users can browse through these categories to find the products they are interested in.
 Advanced Search: Users have the ability to perform advanced searches based on different attributes such as product name, category, or brand. This search functionality allows users to find specific products quickly and efficiently.
-Location-Based Delivery Options: Some products on the platform offer location-based delivery options, including the "Yarın Kapımda" (Tomorrow at My Door) feature. However, it's important to note that not all products necessarily offer this expedited delivery option. Instead, standard delivery is available for all products to various locations.
+Location-Based Delivery Options: Some products on the platform offer location-based delivery options, including the "Yarın Kapımda"  feature. However, it's important to note that not all products necessarily offer this expedited delivery option. Instead, standard delivery is available for all products to various locations.
 Database Integration: The platform is integrated with a database that stores all the necessary information about the products. This includes details such as product name, description, price, category, brand, availability, and delivery options. By leveraging this database, users can access comprehensive information about each product.
 Technical Details:
 
